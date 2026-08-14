@@ -1,0 +1,29 @@
+#estrutura da v1
+#Lista principal contendo animais
+animais = [
+    {
+        "Brinco": 102,
+        "Nome": "Mimosa",
+        "Espécie": "Holandesa",
+        "Idade": 1,
+        "Peso": 250
+    }
+]
+#Função para cadastrar animais
+def cadastrar_animal():
+    input()
+#Função para ver animais
+def ver_animais():
+    print
+#Função para consultar animais
+def consultar_animais():
+    input
+    print
+#Função para remover animais
+def remover_animais():
+    del
+#Main menu - ainda não sei como fazer
+#Finalizar 
+def opção_sair():
+#serve apenas de orientação do que será feito
+    print("Adeus. ")
