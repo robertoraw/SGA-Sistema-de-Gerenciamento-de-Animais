@@ -1,0 +1,63 @@
+#Lista principal contendo animais
+animais = [
+    {
+        "Brinco": 102,
+        "Nome": "Mimosa",
+        "Raça": "Holandesa",
+        "Idade": 1,
+        "Peso": 250
+    }
+]
+# Função para cadastrar animais
+# CRIAR DIC
+# SALVAR EM ANIMAIS
+def cadastrar_animal():
+    brinco = input("Id do animal: ")
+    nome = input("Nome: ")
+    raca = input("Raça: ")
+    idade = input("Idade: ")
+    peso = input("Peso: ")
+
+    animal = {
+    "Brinco": brinco,
+    "Nome": nome,
+    "Raça": raca,
+    "Idade": idade,
+    "Peso": peso
+}
+    animais.append(animal)
+#Função para ver animais. Usar for para listar cada dicionario (precisa ser elaborado o codigo)
+def ver_animais():
+    for animal in animais:
+        print(f"lista: {animal}")
+    
+#Função para consultar animais. Precisa ser elaborado e adicionar variavel responsavel por inserir valor de pesquisa
+def consultar_animais():
+    brinco_pesquisa = int(input("Insira o número do brinco para achar o animal: "))
+
+    encontrado = False
+
+    for animal in animais:
+        if brinco_pesquisa == animal["Brinco"]:
+            print(f"Informações do animal: {animal}")
+            encontrado = True
+    if not encontrado:
+            print("Animal não encontrado")
+#Função para remover animais. Precisa ser elaborado e adicionado variavel responsável pelo del. do item
+def remover_animais():
+    del animais["Idade"]
+
+def menu():
+    print("#" * 30)
+    print("#" + " " * 12 + "menu" + " " * 12 + "#")
+    print("#" * 30)
+    
+#Main menu - ainda não sei como fazer
+#Finalizar 
+
+#Falta adicionar codigo as funções. Melhora-las e deixar o codigo funcional
+menu()
+print(animais)
+cadastrar_animal()
+print(f"Lista atualizada: {animais}")
+consultar_animais()
