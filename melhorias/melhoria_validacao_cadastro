@@ -1,0 +1,40 @@
+def cadastrar_animal():
+
+    while True:
+        try: 
+            brinco = int(input("Id do animal: "))
+
+            if brinco <= 0 or brinco >= 1001:
+               print("O brinco deve estar entre 1 e 1000 ")
+            else:
+                break
+        except:
+            print("Digite somente números! ")
+
+    nome = input("Nome: ")
+    raca = input("Raça: ")
+
+    while True:
+        try:
+            idade = int(input("Idade: "))
+
+            if idade <= 0 or idade >= 30:
+                print("A idade deve ser maior que 0 e menor que 30 anos! ")
+            else:
+                break
+            
+        except:
+            print("Digite somente números! ")
+
+    while True:
+        try:
+            peso = float(input("Peso: "))
+
+            if peso <= 0 or peso >= 1000:
+                print("O peso não pode ser menor que 0 nem maior que 1000!")
+            else:
+                break
+            
+        except:
+            print("Digite somente números!")
+
