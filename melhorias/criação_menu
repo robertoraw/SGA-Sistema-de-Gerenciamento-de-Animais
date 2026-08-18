@@ -1,0 +1,24 @@
+#primeiro menu para rodar sistema - SGA
+def menu():
+#while true faz o loop infinito até que a opção sair seja escolhida.
+    while True:
+#Da print do menu.
+        print("#" * 40)
+        print("#" + " " * 12 + "SGA - MENU" + " " * 12 + "#")
+        print("#" * 40 )
+        print("1 - Cadastrar animal.\n2 - Ver animais.\n3 - Consultar animal.\n4 - Remover animal.\n5 - Sair.")
+#O valor inserido chama a função correspondente.
+        opcao = input("Escolha uma opção: ")
+        if opcao == "1":
+            cadastrar_animal()
+        elif opcao == "2":
+            ver_animais()
+        elif opcao == "3":
+            consultar_animais()
+        elif opcao == "4":
+            remover_animais()
+        elif opcao == "5":
+            break
+        else:
+            print("Opção inválida! ")
+    #O break para o loop e caso seja digitado qualquer outro valo o codigo retorna esse else.
