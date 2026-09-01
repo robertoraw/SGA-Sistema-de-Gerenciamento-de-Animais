@@ -1,0 +1,15 @@
+#removendo animal:
+def remover_animais():
+    remover_animal = input("Deseja remover algum animal?")
+
+    encontrado = False
+
+    if remover_animal == "Sim":
+        remover_brinco = int(input("Digite o brinco do animal: "))
+
+        for animal in animais:
+            if remover_brinco == animal["Brinco"]:
+                animais.remove(animal)
+                encontrado = True
+        if not encontrado:
+            print("Animal não encontrado")

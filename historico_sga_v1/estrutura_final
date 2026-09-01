@@ -1,0 +1,124 @@
+#Lista principal contendo animais
+animais = [
+    {
+        "Brinco": 102,
+        "Nome": "Mimosa",
+        "Raça": "Holandesa",
+        "Idade": 1,
+        "Peso": 250
+    }
+]
+# Função para cadastrar animais
+# CRIAR DIC
+# SALVAR EM ANIMAIS
+def cadastrar_animal():
+
+    while True:
+        try: 
+            brinco = int(input("Id do animal: "))
+
+            if brinco <= 0 or brinco >= 1001:
+               print("O brinco deve estar entre 1 e 1000 ")
+            else:
+                break
+        except:
+            print("Digite somente números! ")
+
+    nome = input("Nome: ")
+    raca = input("Raça: ")
+
+    while True:
+        try:
+            idade = int(input("Idade: "))
+
+            if idade <= 0 or idade >= 30:
+                print("A idade deve ser maior que 0 e menor que 30 anos! ")
+            else:
+                break
+            
+        except:
+            print("Digite somente números! ")
+
+    while True:
+        try:
+            peso = float(input("Peso: "))
+
+            if peso <= 0 or peso >= 1000:
+                print("O peso não pode ser menor que 0 nem maior que 1000!")
+            else:
+                break
+            
+        except:
+            print("Digite somente números!")
+
+    animal = {
+    "Brinco": brinco,
+    "Nome": nome,
+    "Raça": raca,
+    "Idade": idade,
+    "Peso": peso
+}
+    animais.append(animal)
+#Função para ver animais. Usar for para listar cada dicionario (precisa ser elaborado o codigo)
+def ver_animais():
+    for animal in animais:
+        print(f"lista: {animal}")
+    
+#Função para consultar animais. Precisa ser elaborado e adicionar variavel responsavel por inserir valor de pesquisa
+def consultar_animais():
+    brinco_pesquisa = int(input("Insira o número do brinco para achar o animal: "))
+
+    encontrado = False
+
+    for animal in animais:
+        if brinco_pesquisa == animal["Brinco"]:
+            print(f"Informações do animal: {animal}")
+            encontrado = True
+    if not encontrado:
+            print("Animal não encontrado")
+#Função para remover animais. Precisa ser elaborado e adicionado variavel responsável pelo del. do item
+def remover_animais():
+    remover_animal = input("Deseja remover algum animal?")
+
+    encontrado = False
+
+    if remover_animal == "Sim":
+        remover_brinco = int(input("Digite o brinco do animal: "))
+
+        for animal in animais:
+            if remover_brinco == animal["Brinco"]:
+                animais.remove(animal)
+                print("Animal removido com sucesso! ")
+                encontrado = True
+
+        if not encontrado:
+            print("Animal não encontrado")
+
+def menu():
+    while True:
+        
+        print("#" * 40)
+        print("#" + " " * 12 + "SGA - MENU" + " " * 12 + "#")
+        print("#" * 40 )
+        print("1 - Cadastrar animal.\n2 - Ver animais.\n3 - Consultar animal.\n4 - Remover animal.\n5 - Sair.")
+
+        opcao = input("Escolha uma opção: ")
+        if opcao == "1":
+            cadastrar_animal()
+        elif opcao == "2":
+            ver_animais()
+        elif opcao == "3":
+            consultar_animais()
+        elif opcao == "4":
+            remover_animais()
+        elif opcao == "5":
+            break
+        else:
+            print("Opção inválida! ")
+
+
+#Main menu - ainda não sei como fazer
+#Finalizar 
+
+#Falta adicionar codigo as funções. Melhora-las e deixar o codigo funcional
+menu()

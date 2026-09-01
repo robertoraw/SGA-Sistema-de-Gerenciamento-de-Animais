@@ -1,0 +1,25 @@
+#Verificando se os dados inseridos estão corretos. A validação ainda está em processo de aprimoração.
+def cadastrar_animal():
+    brinco = int(input("Id do animal: "))
+    while brinco <= 0 or brinco >= 1000:
+        print("Digite somente números! ")
+        brinco = int(input("Insira novamente a idade do animal: "))
+    nome = input("Nome: ")
+    raca = input("Raça: ")
+    idade = int(input("Idade: "))
+    while idade <= 0 or idade >= 40:
+        print("Idade não válida! ")
+        idade = int(input("Insira novamente a idade do animal: "))
+    peso = float(input("Peso: "))
+    while peso <= 0 or peso >= 1000:
+        print("O peso não pode ser menor que 0,\nnem maior que 1000! ")
+        peso = float(input("Insira novamente o peso: "))
+
+    animal = {
+    "Brinco": brinco,
+    "Nome": nome,
+    "Raça": raca,
+    "Idade": idade,
+    "Peso": peso
+}
+    animais.append(animal)
