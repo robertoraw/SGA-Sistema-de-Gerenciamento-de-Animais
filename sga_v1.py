@@ -45,7 +45,7 @@ def cadastrar_animal():
         try:
             peso = float(input("Peso: "))
 
-            if peso <= 0 or peso >= 1000:
+            if peso <= 0 or peso >= 1001:
                 print("O peso não pode ser menor que 0 nem maior que 1000!")
             else:
                 break
